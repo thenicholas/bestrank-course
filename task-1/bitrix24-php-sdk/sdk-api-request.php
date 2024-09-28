@@ -8,7 +8,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Level;
 use Monolog\Logger;
 
-require_once '../../vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 try {
     $logger = new Logger('task-1-app');
