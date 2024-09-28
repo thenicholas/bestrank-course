@@ -1,0 +1,4 @@
+# Choose "crm" environment
+
+GET {{base_url}}{{token}}/crm.contact.list
+Accept: application/json

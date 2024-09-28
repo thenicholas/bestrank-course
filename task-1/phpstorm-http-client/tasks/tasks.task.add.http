@@ -1,0 +1,11 @@
+# Choose "tasks" environment
+
+POST {{base_url}}{{token}}/tasks.task.add
+Content-Type: application/json
+
+{
+  "fields": {
+    "TITLE": "task for test",
+    "RESPONSIBLE_ID": 1
+  }
+}

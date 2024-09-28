@@ -1,0 +1,4 @@
+# Choose "tasks" environment
+
+GET {{base_url}}{{token}}/tasks.task.list.json
+Accept: application/json

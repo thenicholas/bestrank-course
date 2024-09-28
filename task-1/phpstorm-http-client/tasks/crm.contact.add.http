@@ -1,0 +1,20 @@
+# Choose "tasks" environment
+# Returns: "The request requires higher privileges than provided by the webhook token"
+
+POST {{base_url}}{{token}}/crm.contact.add
+Content-Type: application/json
+
+{
+  "fields": {
+    "NAME": "Глеб",
+    "SECOND_NAME": "Егорович",
+    "LAST_NAME": "Титов",
+    "OPENED": "Y",
+    "ASSIGNED_BY_ID": 1,
+    "TYPE_ID": "CLIENT",
+    "SOURCE_ID": "SELF"
+  },
+  "params": {
+    "REGISTER_SONET_EVENT": "Y"
+  }
+}
