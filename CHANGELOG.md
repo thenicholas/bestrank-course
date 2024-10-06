@@ -22,3 +22,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Set up basic logging configuration for Bitrix24 SDK
 - `.gitignore` file
 - `Dockerfile` file
+
+### Changed
+- added *.local to .gitignore
