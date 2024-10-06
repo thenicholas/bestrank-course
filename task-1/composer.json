@@ -1,6 +1,7 @@
 {
     "require": {
         "bitrix24/b24phpsdk": "^1.1",
-        "monolog/monolog": "^3.7"
+        "monolog/monolog": "^3.7",
+      "ext-curl": "*"
     }
 }
