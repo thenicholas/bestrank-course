@@ -7,15 +7,19 @@ use Bitrix24\SDK\Services\ServiceBuilderFactory;
 use Monolog\Handler\StreamHandler;
 use Monolog\Level;
 use Monolog\Logger;
+use Symfony\Component\Dotenv\Dotenv;
 
 require_once '../vendor/autoload.php';
 
 try {
+    $dotenv = new Dotenv();
+    $dotenv->load(__DIR__.'/.env');
+
     $logger = new Logger('task-1-app');
     $logger->pushHandler(new StreamHandler('b24-api-client-debug.log', Level::Debug));
 
     $b24Service = ServiceBuilderFactory::createServiceBuilderFromWebhook(
-        webhookUrl: 'https://b24-ppqfwe.bitrix24.ru/rest/1/uy41llabw8evqdnx/',
+        webhookUrl: $_ENV['B24_WEBHOOK_URL'],
         logger: $logger
     );
 
