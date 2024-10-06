@@ -3,7 +3,4 @@ services:
     build: docker/php
     volumes:
       - ./:/app
-    ports:
-      - "8000:8000"
     user: "${UID:-1000}:${GID:-1000}"
-    command: sh -c "composer install && cd bitrix24-php-sdk && php sdk-api-request.php"
